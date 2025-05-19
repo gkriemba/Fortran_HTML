@@ -1,0 +1,37 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fortran_html</title>	
+<script>
+function comis(sel){
+let inp = document.getElementById("fortran-"+sel);
+let x = inp.innerHTML;
+if(x =='') return; x = x.trim();
+x = x.replace(/\n+/g, '`').replace(/  +/g, ' ').replace(/ `+/g,'`').replace(/` +/g,'`').replace(/``+/g,'`').replace(/\t/g,'');
+x = x.split(',(').join(',1.*('); x = x.split(', (').join(',1.*(');
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {document.getElementById('div-'+sel).innerHTML = this.responseText;}
+xhttp.open("POST", "main.cgi");
+xhttp.send(x);}
+	
+function trigger(){
+var z = document.querySelectorAll('[id^=fortran]').length;
+for (let i=1; i < z+1; i++){comis(i.toString());}}
+</script>	
+</head>
+
+<body>
+
+<div id="div-1"></div>
+
+<template id='fortran-1'>
+	
+do i = 1, 100
+if(mod(i,2) == 0) print*, i
+enddo
+
+</template>
+
+<script>trigger();</script>
+</body>
