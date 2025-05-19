@@ -23,9 +23,9 @@ for (let i=1; i < z+1; i++){comis(i.toString());}}
 
 <body>
 
-<div id="div-1"></div>
+<div id="div-1"></div> <!-- HERE THE RESULT COMES OUT -->
 
-<template id='fortran-1'>
+<template id='fortran-1'> <!-- AND HERE IS THE FORTRAN CODE -->
 	
 do i = 1, 100
 if(mod(i,2) == 0) print*, i
@@ -34,4 +34,5 @@ enddo
 </template>
 
 <script>trigger();</script>
+<!-- INCLUDE THIS CALL TO INVOKE COMIS INTERPRETER-->
 </body>
