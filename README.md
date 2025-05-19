@@ -2,7 +2,7 @@
 
 ## An  elegant way to embed fortran code inside html
 
-Just upload the two files <b>comis.cgi</b> and <b>main.cgi</b> to your server and start writing your Fortran 77 code (free source format) inside HTML.
+Just upload the two files <b>comis.cgi</b> and <b>main.cgi</b> to your linux server and start writing your Fortran 77 code (free source format) inside HTML.
 See <i>index.html</i> for details and read <i>comis.ps</i> (p4-9) for some minor limitations.
 #### Example 1
 <pre>
