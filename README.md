@@ -12,7 +12,6 @@ do i = 1, 100
 if(mod(i,2) == 0) print*, i
 enddo
 &lt;template>
-&lt;script>trigger();&lt;script>&lt;-- INCLUDE THIS CALL AT THE END OF THE PAGE TO INVOKE COMIS INTERPRETER -->
 </pre>
 
 Result 1
